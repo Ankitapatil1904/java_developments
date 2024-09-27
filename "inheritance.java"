@@ -1,0 +1,35 @@
+class inheritance{
+    public static void main(string []args){
+        cylinder obj=new cylinder();
+        obj.setradius(5.1f);
+        obj.setheight(9.0f);
+        System.out.println("radius:"+obj.r);
+        System.out.println("area:"+obj.pi*obj.r*obj.r);
+        obj.volume();
+
+    }
+}
+class circle{
+    float r;
+    final float pi=3.14f;
+    void setradius(float radius)
+    {
+        r=radius;
+    }
+    //total memebers=3,data members=2,member methods=1
+}
+class cylinder extends circle{
+    float h;
+    void setheight(float height)
+    {
+        h=height;
+    }
+    void volume()
+    {
+        float a=pi*r*r;
+        float v=a*h;
+        System.out.println("height:"+h);
+        System.out.println(("volume:"+v));
+    }
+    //total members:5,data members:3,member methods:2
+}
